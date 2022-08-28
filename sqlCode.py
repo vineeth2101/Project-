@@ -101,4 +101,4 @@ def close_connection():
     
 #create_table()
 #writeData(params)
-read_Data()
+#read_Data()

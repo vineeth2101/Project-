@@ -8,12 +8,15 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit {
 title = 'first';
 totalAngularPackages:any;
-	constructor(private http: HttpClient) { }
+	constructor(private http: HttpClient,) { }
 	ngOnInit() {
+	var routeUrl = window.location.href
+	console.log("rrrrrrrroute",window.location.href)
+	var url = routeUrl.slice(0,-5)
+	console.log(":::::::::url",url)
+	
 	console.log("trying to conncet...............")
-	//		this.http.get("http://13.232.155.224:5000/").subscribe(data => {
-		this.http.get("http://13.234.225.231:5000/").subscribe(data => {
-	//	this.http.get("http://172.31.39.45:5000/").subscribe(data => {
+		this.http.get("http://13.232.124.37:5000/read").subscribe(data => {
 			console.log("::::::::::::::::::::;",data)
    })
    }
