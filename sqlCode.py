@@ -79,6 +79,7 @@ def read_Data():
             c.execute(query)
             a = c.fetchall()
             print(":::::::::::",a)
+            return a
             pts = [dict(row) for row in c.fetchall()]
             print(">>>>>",pts)
             print("INFO: Successfully read data from table: " + tableName + " data:" + str(params))
@@ -100,5 +101,5 @@ def close_connection():
         print("ERROR: Cannot close the conn.. for table: "+ str(tableName) + " due to: " + str(e))
     
 #create_table()
-#writeData(params)
+writeData(params)
 #read_Data()

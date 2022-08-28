@@ -10,14 +10,14 @@ title = 'first';
 totalAngularPackages:any;
 	constructor(private http: HttpClient,) { }
 	ngOnInit() {
-	var routeUrl = window.location.href
-	console.log("rrrrrrrroute",window.location.href)
-	var url = routeUrl.slice(0,-5)
-	console.log(":::::::::url",url)
-	
-	console.log("trying to conncet...............")
-		this.http.get("http://13.232.124.37:5000/read").subscribe(data => {
-			console.log("::::::::::::::::::::;",data)
-   })
-   }
+		var routeUrl = window.location.href
+		var url = routeUrl.slice(0,-5)
+		console.log("launching url > ",url)
+			this.http.get("http://13.232.124.37:5000/write").subscribe(data => {
+			console.log(" written data",data)
+     			})
+			this.http.get("http://13.232.124.37:5000/read").subscribe(data => {
+			console.log("read data >> ",data)
+   			})
+   		}
    }

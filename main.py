@@ -26,6 +26,7 @@ def write():
 def read():
     print("rrrrrrrrrrrrrrr")
     ret = read_Data()
+    print("rettttttttt",ret)
     rval = {"msg":ret}
     return rval
 
